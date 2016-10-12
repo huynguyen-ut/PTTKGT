@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="doc\description.txt" />
+    <Content Include="input\buses.txt" />
     <Content Include="input\distance.txt" />
     <Content Include="input\station.txt" />
   </ItemGroup>
