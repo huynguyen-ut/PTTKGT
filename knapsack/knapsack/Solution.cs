@@ -8,14 +8,15 @@ namespace knapsack
 {
     class Solution
     {
-        List<Object> obj;
-        Bag bag;
-        int Vmax;
-        
+        private List<Object> obj;
+        private Bag bag;
+        private int Vmax;
+        private byte mode;
         public Solution(List<Object> obj,Bag bag) {
             this.obj = obj;
             this.bag = bag;
-            Vmax = 0;
+            this.Vmax = 0;
+            this.mode = 0;
         }
         public void PrintSolution() {
             foreach (Object o in this.bag.Obj) {
@@ -25,7 +26,11 @@ namespace knapsack
             Console.WriteLine("////////////////////////////");
         }
         public void run() {
-            retry(0);
+            switch (mode) {
+                case 0: retry(0);
+                        break;
+        }
+           
         }
         private void retry(int i) {
             for (int j = 0; j <= 1; j++) {
@@ -36,11 +41,7 @@ namespace knapsack
                     this.bag.removeObject(obj[i]);
                 if (i == (obj.Count - 1)){
                 if(this.bag.Weight>this.bag.TotalWeight()&&this.bag.TotalValue()>Vmax)
-                {
-
-                       // foreach (Object ob in this.obj)
-                         //   if (obj[i].Status == 1)
-                           //     this.bag.addObject(obj[i]);
+                {                      
                         PrintSolution();
                 }
               }

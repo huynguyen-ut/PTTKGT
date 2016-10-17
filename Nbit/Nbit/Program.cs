@@ -10,6 +10,9 @@ namespace Nbit
     {
         static void Main(string[] args)
         {
+            NBit nbit = new NBit(4);
+            nbit.Try(0);
+            Console.ReadKey();
         }
     }
 }
