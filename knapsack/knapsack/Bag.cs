@@ -54,6 +54,11 @@ namespace knapsack
             this.obj.Add(o);
            
         }
+        public Bag ShallowCopy()
+        {
+            return (Bag)this.MemberwiseClone();
+        }
+
         public void removeObject(Object o) {
             
             foreach (Object b in Obj) {

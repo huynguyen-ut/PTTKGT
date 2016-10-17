@@ -25,6 +25,7 @@ namespace knapsack
             Bag bag = new Bag(27);
             Solution solution = new Solution(listOject,bag);
             solution.run();
+            solution.PrintSolution();
             Console.ReadKey();
 
         }

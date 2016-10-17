@@ -22,7 +22,10 @@ namespace knapsack
             set { name = value; }
         }
         private int status;
-
+        public Object ShallowCopy()
+        {
+            return (Object)this.MemberwiseClone();
+        }
         public int Status
         {
             get { return status; }
