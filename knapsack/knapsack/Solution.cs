@@ -29,8 +29,13 @@ namespace knapsack
             switch (mode) {
                 case 0: retry(0);
                         break;
+                case 1: this.GreedyAlgorithm();
+                    break;
         }
            
+        }
+        private void GreedyAlgorithm() {
+
         }
         private void retry(int i) {
             for (int j = 0; j <= 1; j++) {
