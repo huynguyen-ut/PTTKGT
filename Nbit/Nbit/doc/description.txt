@@ -1,0 +1,1 @@
+﻿Cho chuỗi bit có chiều dài n, liệt kê tất cả các trường hợp của chuỗi bit
