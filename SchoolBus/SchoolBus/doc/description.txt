@@ -3,4 +3,4 @@
   + Tập các trạm học sinh đứng đón(file Station.txt) gồm 3 thông số tương ứng với 3 cột: id(mã trạm), lat(kinh tuyến), lon(vĩ tuyến), Số học sinh đứng chờ
   + Tập các xe Bus(buses.txt) gồm 2 thông số tương ứng 2 cột: id(mã xe), kích cỡ xe bus(số lượng ghế)
   + Ma trận khoảng cách(distance.txt) 42x42, bao gồm 2 thông số tương ứng với 2 cột: khoảng cách(distance), thời gian(duration) 
-- Output là lộ trình các xe, số lượng sinh viên sinh lên xe ở mỗi trạm
+- Output là lộ trình các xe, số lượng sinh viên lên xe ở mỗi trạm, thời gian xe đến mỗi trạm.

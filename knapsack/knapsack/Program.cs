@@ -15,7 +15,7 @@ namespace knapsack
             Object B = new Object("B", 10, 25);
             Object C = new Object("C", 1, 25);
             Object D = new Object("D", 2, 25);
-            Object E = new Object("E", 1, 4);
+            Object E = new Object("E", 3, 4);
             List<Object> listOject = new List<Object>();
             listOject.Add(A);
             listOject.Add(B);
