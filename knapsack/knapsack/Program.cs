@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,11 +25,19 @@ namespace knapsack
 
             Bag bag = new Bag(27);
             Solution solution = new Solution(listOject,bag);
+            Stopwatch st = new Stopwatch();
+            st.Start();
             solution.run();
             solution.PrintSolution();
+            st.Stop();
+            Console.WriteLine("{0} Seconds", st.Elapsed.ToString());
+
+            st.Start();
             solution.Mode = 1;
             solution.run();
             solution.PrintSolution();
+            st.Stop();
+            Console.WriteLine("{0} Seconds", st.Elapsed.ToString());
             Console.ReadKey();
 
         }
