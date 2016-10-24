@@ -13,11 +13,25 @@ namespace knapsack
         private int Vmax;
         private byte mode;
         private Bag solution;
+
+        public byte Mode
+        {
+            get
+            {
+                return mode;
+            }
+
+            set
+            {
+                mode = value;
+            }
+        }
+
         public Solution(List<Object> obj,Bag bag) {
             this.obj = obj;
             this.bag = bag;
             this.Vmax = 0;
-            this.mode = 0;
+            this.Mode = 0;
             solution = new Bag(27);
         }
         public void PrintSolution() {
@@ -28,7 +42,7 @@ namespace knapsack
             Console.WriteLine("////////////////////////////");
         }
         public void run() {
-            switch (mode) {
+            switch (Mode) {
                 case 0: retry(0);
                         break;
                 case 1: this.GreedyAlgorithm();
@@ -37,6 +51,15 @@ namespace knapsack
            
         }
         private void GreedyAlgorithm() {
+            obj.Sort();
+            foreach (Object o in this.obj)
+                if (this.bag.TotalWeight()+o.W<this.bag.Weight) {
+                    this.bag.addObject(o);
+                }
+            foreach (Object o in bag.Obj)
+            {
+                this.solution.addObject(o.ShallowCopy());
+            }
 
         }
         private void CopySolution() {

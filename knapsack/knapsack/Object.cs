@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace knapsack
 {
-    class Object
+    class Object : IComparable
     {
         private static int id=0;
 
@@ -26,6 +26,14 @@ namespace knapsack
         {
             return (Object)this.MemberwiseClone();
         }
+
+        public int CompareTo(object obj)
+        {
+            if (this.v > ((Object)obj).v)
+                return -1;
+            else return 1;
+        }
+
         public int Status
         {
             get { return status; }
