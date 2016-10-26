@@ -54,8 +54,11 @@ namespace knapsack
             obj.Sort();
             bag.Obj.Clear();
             foreach (Object o in this.obj)
+                o.Status = 0;
+            foreach (Object o in this.obj)
                 if (this.bag.TotalWeight()+o.W<=this.bag.Weight) {
                     this.bag.addObject(o);
+                    o.Status = 1;
                 }
             this.solution.Obj.Clear();
             foreach (Object o in bag.Obj)

@@ -16,6 +16,12 @@ namespace knapsack
             Object C = new Object("C", 1, 25);
             Object D = new Object("D", 2, 25);
             Object E = new Object("E", 3, 4);
+
+            Object F = new Object("F", 15, 30);
+            Object G = new Object("G", 10, 25);
+            Object H = new Object("H", 1, 25);
+            Object U = new Object("U", 2, 25);
+            Object I = new Object("I", 3, 4);
             List<Object> listOject = new List<Object>();
             listOject.Add(A);
             listOject.Add(B);
@@ -23,21 +29,28 @@ namespace knapsack
             listOject.Add(D);
             listOject.Add(E);
 
+            listOject.Add(F);
+            listOject.Add(G);
+            listOject.Add(H);
+            listOject.Add(U);
+            listOject.Add(I);
+            
             Bag bag = new Bag(27);
             Solution solution = new Solution(listOject,bag);
-            Stopwatch st = new Stopwatch();
-            st.Start();
+            Stopwatch st1 = new Stopwatch();
+            st1.Start();
             solution.run();
             solution.PrintSolution();
-            st.Stop();
-            Console.WriteLine("{0} Seconds", st.Elapsed.ToString());
+            st1.Stop();
+            Console.WriteLine("{0} Seconds", st1.Elapsed.ToString());
 
-            st.Start();
+            Stopwatch st2 = new Stopwatch();
+            st2.Start();
             solution.Mode = 1;
             solution.run();
             solution.PrintSolution();
-            st.Stop();
-            Console.WriteLine("{0} Seconds", st.Elapsed.ToString());
+            st2.Stop();
+            Console.WriteLine("{0} Seconds", st2.Elapsed.ToString());
             Console.ReadKey();
 
         }
