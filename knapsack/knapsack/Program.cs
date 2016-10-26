@@ -34,6 +34,12 @@ namespace knapsack
             listOject.Add(H);
             listOject.Add(U);
             listOject.Add(I);
+
+            listOject.Add(F);
+            listOject.Add(G);
+            listOject.Add(H);
+            listOject.Add(U);
+            listOject.Add(I);
             
             Bag bag = new Bag(27);
             Solution solution = new Solution(listOject,bag);
